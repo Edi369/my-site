@@ -29,10 +29,6 @@ export default function About() {
         <p className={`text-1xl lg:text-3xl font-bold mt-5`}>
           🪦 RIP <a href="https://en.wikipedia.org/wiki/Edd_Gould" className="text-green-600">Edd Gould</a>.
         </p>
-
-        <a href="https://coisasdoedi.beer" className="text-red-600">
-          coisas do edi
-        </a>
       </div>
     </div>
   );
