@@ -13,12 +13,14 @@ const robotoMono = Roboto_Mono({
 export const metadata = {
   title: "edi's site",
   description: "O site maneiro do edi.",
+  metadataBase: new URL('https://coisasdoedi.beer/'),
   openGraph: {
     title: "edi's site",
     description: "O site maneiro do edi.",
-    url: "https://edi.com",
-    siteName: "edi's site",
-    images: ["/favicon.ico"],
+    url: "https://coisasdoedi.beer",
+    siteName: "Site.",
+    type: "website",
+    locale: "pt-BR",
   },
 };
 
