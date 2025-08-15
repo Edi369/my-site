@@ -5,21 +5,21 @@ export default function Home() {
   const linksinfo = JSON.parse(readFileSync("src/linksinfo.json", "utf8"));
 
   return (
-    <div className="flex flex-col px-20 pb-5 pt-25 justify-center items-center lg:items-end lg:justify-end">
+    <div className="flex flex-col px-5 lg:px-20 pb-5 pt-25 items-end justify-end">
       { /* Site name */ }
-      <h1 className="text-6xl lg:text-8xl font-bold text-right text-red-600">edi</h1>
+      <h1 className="text-8xl font-bold text-right text-red-600">edi</h1>
 
       <div className="flex flex-wrap justify-end">
-        <h2 className="text-1xl lg:text-3xl font-bold text-right text-red-800">edi</h2>
-        <p className="text-1xl lg:text-3xl font-bold text-right text-small-foreground">.</p>
+        <h2 className="text-3xl font-bold text-right text-red-800">edi</h2>
+        <p className="text-3xl font-bold text-right text-small-foreground">.</p>
       </div>
 
-      <p className={`text-5xl font-bold text-right`}>
+      <p className={`text-4xl lg:text-5xl font-bold text-right`}>
         Oi! Esse é o meu site.
       </p>
 
       { /* Introduction */ }
-      <p className={`text-2xl w-full mt-5 font-bold text-left`}>
+      <p className={`text-4xl lg:text-3xl w-full mt-5 font-bold text-left`}>
         Nesse site, você pode encontrar informações sobre mim, meus projetos, meus gostos e etc ai.<br />
         meu portfólio legal e simples na internet para internautas 😎.
       </p>
@@ -29,7 +29,8 @@ export default function Home() {
         <p className="text-2xl font-bold text-left">Não se esqueça de dar uma olhada na
           <a className="text-red-600">  lista de atalhos</a>:
         </p>
-        <Shortcuts linksinfo={linksinfo} />
+        {/* normal text size for large screens no scale applied */}
+        <Shortcuts linksinfo={linksinfo} classname="text-2xl lg:text-base" />
       </div>
     </div>
   );
