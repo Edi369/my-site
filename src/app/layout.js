@@ -11,8 +11,8 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata = {
-  title: "Em construção!",
-  description: "Em construção!",
+  title: "edi's site",
+  description: "O site maneiro do edi.",
 };
 
 export default function RootLayout({ children }) {
