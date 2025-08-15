@@ -82,7 +82,7 @@ export function LinkHover() {
             <span className="italic">
               {loading
                 ? "Carregando descrição..."
-                : (description ?? undefined)
+                : description
               }
             </span>
             <p className="text-blue-400">
