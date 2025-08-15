@@ -13,6 +13,13 @@ const robotoMono = Roboto_Mono({
 export const metadata = {
   title: "edi's site",
   description: "O site maneiro do edi.",
+  openGraph: {
+    title: "edi's site",
+    description: "O site maneiro do edi.",
+    url: "https://edi.com",
+    siteName: "edi's site",
+    images: ["/favicon.ico"],
+  },
 };
 
 export default function RootLayout({ children }) {
