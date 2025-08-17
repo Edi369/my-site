@@ -27,7 +27,7 @@ export default function Home() {
         </p>
         
         <div className="flex flex-wrap gap-2 bg-background-component">
-          <Shortcuts linksinfo={linksinfo} classname="text-2xl lg:text-base" />
+          <Shortcuts linksinfo={linksinfo} className="text-2xl lg:text-base flex flex-row gap-2" />
         </div>
       </div>
     </div>
