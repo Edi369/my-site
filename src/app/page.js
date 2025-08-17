@@ -1,5 +1,5 @@
-import Initial from "@/pagesComponents/initial";
-import About from "@/pagesComponents/about";
+import Initial from "@/pages_components/initial";
+import About from "@/pages_components/about";
 
 export default function Home() {
   return (
