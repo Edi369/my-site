@@ -1,6 +1,6 @@
 "use client";
 import { useLayoutEffect, useState, useEffect } from "react";
-import Tooltip from "@/components/tooltip";
+import { TooltipRef } from "@/components/tooltip";
 
 const descriptionCache = new Map(); // cache de descrições
 
@@ -64,30 +64,20 @@ export function LinkHover() {
       setDescription(null);
 
       TryFetchDescription(tooltipData.content)
-        .then(desc => {
-          setDescription(desc);
-        })
+        .then(setDescription)
         .finally(() => setLoading(false));
     }
   }, [tooltipData]);
 
   return (
     tooltipData && (
-      <Tooltip
-        show={true}
+      <TooltipRef
         position={tooltipData.position}
         tooltipTitle={tooltipData.title}
         tooltipContent={
           <>
-            <span className="italic">
-              {loading
-                ? "Carregando descrição..."
-                : description
-              }
-            </span>
-            <p className="text-blue-400">
-              {link}
-            </p>
+            <span className="italic text-sm">{loading ? "...ZzZ" : description}</span>
+            <p className="text-blue-400">{link}</p>
         </>
         }
       />
@@ -105,7 +95,7 @@ async function TryFetchDescription(url) {
     if (!response.ok) return null;
     const data = await response.json();
     descriptionCache.set(url, data.description);
-    return data.description ?? null;
+    return data.description;
   } catch (e) {
     return null;
   }

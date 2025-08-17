@@ -10,12 +10,12 @@ export default function Home() {
       <h1 className="text-8xl font-bold text-right text-red-600">edi</h1>
       <h2 className="text-3xl font-bold text-right text-red-800">edi<span className="text-small-foreground">.</span></h2>
 
-      <p className={`text-4xl lg:text-5xl font-bold text-right`}>
+      <p className="text-4xl lg:text-5xl font-bold text-right">
         Oi! Esse é o meu site.
       </p>
 
       { /* Introduction */ }
-      <p className={`text-2xl lg:text-3xl w-full mt-5 font-bold text-left`}>
+      <p className="text-2xl lg:text-3xl w-full mt-5 font-bold text-left">
         Nesse site, você pode encontrar informações sobre mim, meus projetos, meus gostos e etc ai.<br />
         meu portfólio legal e simples na internet para internautas 😎.
       </p>
@@ -26,7 +26,7 @@ export default function Home() {
           <span className="text-red-600">  lista de atalhos</span>:
         </p>
         
-        <div className="bg-background-component">
+        <div className="flex flex-wrap gap-2 bg-background-component">
           <Shortcuts linksinfo={linksinfo} classname="text-2xl lg:text-base" />
         </div>
       </div>
