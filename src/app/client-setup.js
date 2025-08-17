@@ -6,7 +6,7 @@ const descriptionCache = new Map(); // cache de descrições
 
 export function Selection() {
   return (
-    <style jsx>{`
+    <style jsx global>{`
       ::selection {
         background-color: #ff0000;
         color: #ffffff;
